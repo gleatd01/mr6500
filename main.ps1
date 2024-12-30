@@ -7,3 +7,8 @@ scoop install miniconda3
 Get-Process -Id $PID | Select-Object -ExpandProperty Path | ForEach-Object { Invoke-Command { & "$_" } -NoNewScope }
 
 conda create -n netgear python=3.12
+conda activate netgear
+
+conda install asyncio telnetlib3 -y
+
+python main.py
